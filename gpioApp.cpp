@@ -45,11 +45,11 @@ int main(){
 
   if(button == 0){
     cout << "Button pressed, setting external LED on P9.12 to HIGH" << endl;
-    outGPIO.streamWrite(HIGH);    
+    outGPIO.setValue(HIGH);    
   }
   else{
     cout << "Button released, clearing external LED on P9.12 to LOW" << endl;
-    outGPIO.streamWrite(LOW);
+    outGPIO.setValue(LOW);
   }
 
   return 0;

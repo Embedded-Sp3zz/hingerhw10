@@ -25,10 +25,14 @@ int main(){
 
   cout << "ADC value is: " << reading << endl;
 
-  int resistance = R1 * (1 / ((Vref/reading) - 1)); 
+  float current_voltage = reading * (Vref/4096);
+
+  float resistance = (current_voltage * R1) / (Vref - current_voltage); 
+
+  cout << "resistance is " << resistance << endl;
 
   if(resistance > 1000){
-    float resistance = resistance / 1000;
+    resistance = resistance / 1000;
     std::cout << std::fixed;
     std::cout << std::setprecision(2);
     cout << "Resistance: " << resistance << "K Ohms" << endl;

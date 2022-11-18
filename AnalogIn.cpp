@@ -6,7 +6,7 @@
 #include "AnalogIn.h"
 using namespace std;
 
-#define ADC_PATH "sys/bus/iio/devices/iio:device0/in_voltage"
+#define ADC_PATH "/sys/bus/iio/devices/iio:device0/in_voltage"
 
 AnalogIn::AnalogIn(){
 
